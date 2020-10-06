@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout"
+      xmlns:th="http://www.thymeleaf.org" layout:decorate="~{/layout/public}">
+<head>
+    <meta charset="UTF-8">
+    <title>Class Detail</title>
+</head>
+<link rel="stylesheet" th:href="@{/resources/static/semantic.min.css}">
+<link rel="stylesheet" th:href="@{/resources/static/application.css}">
+<script th:src="@{/resources/static/jquery.min.js}"></script>
+<script th:src="@{/resources/static/semantic.min.js}"></script>
+<body>
+    <h3  layout:fragment="title" class="ui center aligned header">Class Detail Page Title</h3>
+<!--
+<div  layout:fragment="cover-image" class="ui fluid image"
+     th:replace="layout/fragments/classDetail/classDetailImage :: classImage ">
+</div>
+-->
+<div layout:fragment="content" >
+    <div class="ui padded stacked segment">
+
+    <div id="classtab" class="ui pointing blue inverted menu">
+        <span data-tab="class" class="active item">Class  Information</span>
+        <span data-tab="course" class="item">Course Information</span>
+        <span data-tab="teacher" class="item">Teacher Information</span>
+        <span data-tab="register" class="item">Registration</span>
+    </div>
+    <div class="ui tab active" data-tab="class">
+        <div class="ui container"
+             th:replace="layout/fragments/classDetail/classInfo :: classInfo">
+        </div>
+    </div>
+    <div class="ui tab " data-tab="course">
+        <div class="ui container"
+             th:replace="layout/fragments/classDetail/courseInfo :: courseInfo">
+        </div>
+    </div>
+    <div class="ui tab " data-tab="teacher">
+        <div class="container"
+             th:replace="layout/fragments/classDetail/teacherInfo :: teacherInfo">
+        </div>
+    </div>
+    <div class="ui tab " data-tab="register">
+        <div class="ui segment">
+            <h3>Registration </h3>
+        </div>
+    </div>
+    <script>
+        $(()=>{
+            $('#classtab .item').tab()
+        })
+    </script>
+</div>
+</div>
+
+</body>
+</html>

@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout"
+      xmlns:th="http://www.thymeleaf.org" layout:decorate="~{/layout/public}">
+<head>
+    <meta charset="UTF-8">
+    <title>Join Class</title>
+</head>
+<link rel="stylesheet" th:href="@{/resources/static/semantic.min.css}">
+<link rel="stylesheet" th:href="@{/resources/static/application.css}">
+<script  th:src="@{/resources/static/jquery.min.js}"></script>
+<script  th:src="@{/resources/static/semantic.min.js}"></script>
+<body>
+
+    <h3  layout:fragment="title" class="ui center aligned header">Page for Applied People</h3>
+
+    <div layout:fragment="content">
+        <div class="ui container"
+             th:replace="layout/fragments/classDetail/joinclass :: joinclass">
+        </div>
+
+    </div>
+</body>
+</html>

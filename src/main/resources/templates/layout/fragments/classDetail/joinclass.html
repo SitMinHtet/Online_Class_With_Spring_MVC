@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout"
+      xmlns:th="http://www.thymeleaf.org" layout:decorate="~{/layout/public}">
+<head>
+    <meta charset="UTF-8">
+    <title>Join Class</title>
+</head>
+<link rel="stylesheet" th:href="@{/resources/static/semantic.min.css}">
+<link rel="stylesheet" th:href="@{/resources/static/application.css}">
+<script  th:src="@{/resources/static/jquery.min.js}"></script>
+<script  th:src="@{/resources/static/semantic.min.js}"></script>
+<body>
+
+    <div class="ui padded stacked segment" th:fragment="joinclass">
+        <div class="ui grid">
+
+            <div class="four wide column">
+                <div class="ui fluid image">
+                    <img th:src="@{/resources/static/images/angular.png}">
+                </div>
+            </div>
+
+            <div class="twelve wide column">
+                <h3>Angular Class</h3>
+
+                <div class="ui list">
+                    <!--Level-->
+                    <div class="item">
+                        <i class="book icon"></i>
+                        <div class="content">Basic Level</div>
+                    </div>
+                    <!--Start Date-->
+                    <div class="item">
+                        <i class="calendar icon"></i>
+                        <div class="content">06/OCT/2020</div>
+                    </div>
+                    <!--Days-->
+                    <div class="item">
+                        <i class="calendar icon"></i>
+                        <div class="content">Mon - Fri</div>
+                    </div>
+                    <!--Times-->
+                    <div class="item">
+                        <i class="clock icon"></i>
+                        <div class="content">18:00 - 20:00</div>
+                    </div>
+                    <!--Duration-->
+                    <div class="item">
+                        <i class="hourglass half icon"></i>
+                        <div class="content">3 Months</div>
+                    </div>
+                    <!--Fees-->
+                    <div class="item">
+                        <i class="dollar icon"></i>
+                        <div class="content">120000MMK</div>
+                    </div>
+                    <!--Requirements-->
+                    <div class="item">
+                        <i class="hand point right outline icon"></i>
+                        <div class="content">Basic JavaScript</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="ui grid">
+            <div class="four wide column">
+            </div>
+            <div class="eight wide column">
+                <a th:href="@{/public}" class="ui animated fluid red button">
+                    <span class="visible content">You Are Joined</span>
+                    <span class="hidden content">
+                        <i class="thumbs up icon"></i>Thank You!
+                </span>
+                </a>
+            </div>
+            <div class="four wide column">
+            </div>
+        </div>
+    </div>
+
+</body>
+</html>

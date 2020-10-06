@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout"
+      xmlns:th="http://www.thymeleaf.org" layout:decorate="~{/layout/public}">
+<head>
+    <meta charset="UTF-8">
+    <title>Class Detail</title>
+</head>
+<link rel="stylesheet" th:href="@{/resources/semantic.min.css}">
+<script th:src="@{/resources/jquery.min.js}"></script>
+<script th:src="@{/resources/semantic.min.js}"></script>
+<body>
+    <div class="ui segment" th:fragment="teacherInfo">
+        <div class="ui grid">
+            <div class="four wide column">
+                <div class="ui fluid circular image">
+                    <img th:src="@{/resources/static/images/teacherImage.jpg}">
+                </div>
+            </div>
+            <div class="twelve wide column">
+                <h3>カカシ畑</h3>
+                <div class="item">
+                    <div class="header">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
